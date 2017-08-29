@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+5.times do
+  Question.create(title: "#{Faker::RickAndMorty.character}", description: "#{Faker::RickAndMorty.quote}?", user_id: "#{rand(1..5)}")
+end
+
+5.times do
+  Answer.create(description: "#{Faker::RickAndMorty.quote}", question_id: "#{rand(1..5)}")
+end

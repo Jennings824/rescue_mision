@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <div class="topnav" id="myTopnav">
+      <a href="/questions">Questions</a>
+      <a href="/questions/new">New Question</a>
+    </div>
+    <h3><%= flash[:notice] || flash[:errors]%></h3>
     <%= yield %>
   </body>
 </html>
